@@ -165,7 +165,9 @@ export default {
         if (!browsers[id])
             return;
 
-        await browsers[id].driver.saveScreenshot(screenshotPath);
+        const screenshot = await browsers[id].driver.takeScreenshot(screenshotPath);
+
+        fs.writeFileSync(screenshotPath, screenshot, 'base64');
     },
 
     async isLocalBrowser () {

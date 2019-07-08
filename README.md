@@ -10,7 +10,7 @@ npm install testcafe-browser-provider-perfecto
 
 ## Usage
 
-When you run tests from the command line, use the alias when specifying browsers:
+When you run tests from the command line, use the configuration file when specifying browsers:
 
 ```
 testcafe perfecto:'path/to/configuration/file.json' 'path/to/test/file.js'

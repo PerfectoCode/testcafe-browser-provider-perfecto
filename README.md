@@ -11,18 +11,40 @@ npm install testcafe-browser-provider-perfecto
 
 ## Usage
 
-
-You can determine the available browser aliases by running
-```
-testcafe -b perfecto
-```
-
 When you run tests from the command line, use the alias when specifying browsers:
 
 ```
-testcafe perfecto:browser1 'path/to/test/file.js'
+testcafe perfecto:'path/to/configuration/file.json' 'path/to/test/file.js'
 ```
 
+Sample configuration file:
+
+```
+{
+      "platformName" : "Windows",
+      "platformVersion" : "10",
+      "browserName" : "Chrome",
+      "browserVersion" : "72",
+      "resolution" : "1280x1024",
+      "location" : "US East"
+}
+```
+
+The following environment variables should be defined:
+
+```
+PERFECTO_SECURITY_TOKEN='the security token'
+PERFECTO_URL='url pointing to the cloud'
+```
+
+The following environment variables may be required:
+
+```
+PERFECTO_TUNNEL_ID='required if perfectoconnect is needed for browser to test machine connection'
+PERFECTO_JOB_NAME='the job name'
+PERFECTO_JOB_NUMBER='the job number'
+PERFECTO_TEST_NAME='the test name as seen in the report'
+```
 
 When you use API, pass the alias to the `browsers()` method:
 
@@ -30,7 +52,7 @@ When you use API, pass the alias to the `browsers()` method:
 testCafe
     .createRunner()
     .src('path/to/test/file.js')
-    .browsers('perfecto:browser1')
+    .browsers('perfecto:path/to/configuration/file.json')
     .run();
 ```
 

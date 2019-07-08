@@ -2,12 +2,10 @@
   "name": "testcafe-browser-provider-perfecto",
   "version": "1.0.0",
   "description": "perfecto TestCafe browser provider plugin.",
-
   "repository": {
     "type": "git",
     "url": "git+https://github.com/PerfectoCode/testcafe-browser-provider-perfecto.git"
   },
-
   "author": "Morris Horesh",
   "license": "Apache 2.0",
   "main": "lib/index",
@@ -25,7 +23,7 @@
     "plugin",
     "perfectomobile",
     "digital",
-	"perfecto"
+    "perfecto"
   ],
   "dependencies": {
     "babel-runtime": "^6.11.6"

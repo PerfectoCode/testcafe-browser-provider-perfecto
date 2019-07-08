@@ -1,5 +1,4 @@
 # testcafe-browser-provider-perfecto
-[![Build Status](https://travis-ci.org/morrishoresh/testcafe-browser-provider-perfecto.svg)](https://travis-ci.org/morrishoresh/testcafe-browser-provider-perfecto)
 
 This is the **perfecto** browser provider plugin for [TestCafe](http://devexpress.github.io/testcafe).
 

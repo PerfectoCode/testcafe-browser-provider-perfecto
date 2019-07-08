@@ -1,2 +1,5 @@
 lib
 node_modules
+.publishrc
+package-lock.json
+

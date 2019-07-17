@@ -1,6 +1,6 @@
 {
   "name": "testcafe-browser-provider-perfecto",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "perfecto TestCafe browser provider plugin.",
   "repository": {
     "type": "git",

@@ -127,7 +127,7 @@ export default {
             browsers[id] = null;
         }
 
-        Promise.all(pending);
+        await Promise.all(pending);
 
     },
 

@@ -6,6 +6,8 @@ This is the **perfecto** browser provider plugin for [TestCafe](http://devexpres
 
 ```
 npm install testcafe-browser-provider-perfecto
+
+If TestCafe was installed globally (i.e. with the -g or --global optios) then this plugin must be installed the same way.
 ```
 
 ## Usage

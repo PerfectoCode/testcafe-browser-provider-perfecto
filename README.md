@@ -7,7 +7,7 @@ This is the **perfecto** browser provider plugin for [TestCafe](http://devexpres
 ```
 npm install testcafe-browser-provider-perfecto
 
-If TestCafe was installed globally (i.e. with the -g or --global optios)
+If TestCafe was installed globally (i.e. with the -g or --global options),
 then this plugin must be installed the same way.
 
 It is assumed that selenium-webdriver and perfecto-reporting are already installed.

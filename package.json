@@ -26,7 +26,7 @@
     "perfecto"
   ],
   "dependencies": {
-    "babel-runtime": "^6.11.6"
+    "babel-runtime": "^6.11.6",
     "pinkie": "^2.0.4"
   },
   "devDependencies": {

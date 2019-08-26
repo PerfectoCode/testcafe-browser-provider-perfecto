@@ -9,6 +9,7 @@ var perfectoUrl = process.env.PERFECTO_URL;
 var jobName = process.env.PERFECTO_JOB_NAME;
 var jobNumber = process.env.PERFECTO_JOB_NUMBER;
 var testName = process.env.PERFECTO_TEST_NAME ? process.env.PERFECTO_TEST_NAME : 'TestCafe';
+var webDriverProxy = process.env.PERFECTO_WEBDRIVER_PROXY;
 
 class Browser {
     constructor () {
@@ -71,10 +72,14 @@ export default {
         }
 
 
-        const driver = await new webdriver.Builder()
+        var driver = await new webdriver.Builder()
             .withCapabilities(browserConf)
-            .usingServer(perfectoUrl)
-            .build();
+            .usingServer(perfectoUrl);
+
+        if (webDriverProxy)
+            driver = await driver.usingWebDriverProxy(webDriverProxy);
+
+        driver = await driver.build();
 
         browsers[id] = new Browser();
         browsers[id].driver = driver;

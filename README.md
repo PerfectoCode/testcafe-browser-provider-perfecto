@@ -48,12 +48,12 @@ PERFECTO_TUNNEL_ID='required if perfectoconnect is needed for browser to test ma
 PERFECTO_JOB_NAME='the job name'
 PERFECTO_JOB_NUMBER='the job number'
 PERFECTO_TEST_NAME='the test name as seen in the report'
-PERFECTO_WEBDRIVER_PROXY='webdriver_proxy_host:port'
+PERFECTO_WEBDRIVER_PROXY='http://webdriver_proxy_host:port'
 ```
 
 When you use API, pass the alias to the `browsers()` method:
 
-```js
+```
 testCafe
     .createRunner()
     .src('path/to/test/file.js')

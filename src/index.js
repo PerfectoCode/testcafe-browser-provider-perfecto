@@ -72,14 +72,14 @@ export default {
         }
 
 
-        var driver = await new webdriver.Builder()
+        var driver = new webdriver.Builder()
             .withCapabilities(browserConf)
             .usingServer(perfectoUrl);
 
         if (webDriverProxy)
-            driver = await driver.usingWebDriverProxy(webDriverProxy);
+            driver.usingWebDriverProxy(webDriverProxy);
 
-        driver = await driver.build();
+        await driver.build();
 
         browsers[id] = new Browser();
         browsers[id].driver = driver;
